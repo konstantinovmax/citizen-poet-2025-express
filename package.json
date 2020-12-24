@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/konstantinovmax/citizen-poet-2025-express/issues"
   },
-  "homepage": "https://github.com/konstantinovmax/citizen-poet-2025-express#readme",
+  "homepage": "https://m-p.space",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
