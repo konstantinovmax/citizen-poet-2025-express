@@ -1,0 +1,30 @@
+{
+  "name": "citizen-poet-2025-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konstantinovmax/citizen-poet-2025-express.git"
+  },
+  "keywords": [],
+  "author": "Team #30, Ya.Praktikum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konstantinovmax/citizen-poet-2025-express/issues"
+  },
+  "homepage": "https://github.com/konstantinovmax/citizen-poet-2025-express#readme",
+  "dependencies": {
+    "editorconfig": "^0.15.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
