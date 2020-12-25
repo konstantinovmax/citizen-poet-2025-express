@@ -36,9 +36,9 @@ const createUser = (req, res) => {
 };
 
 const updateUser = (req, res) => {
-  const { name, phone, email, password } = req.body;
+  const { name, birthday } = req.body;
 
-  User.findByIdAndUpdate(req.user._id, { name, phone, email, password }, { runValidators: true, new: true })
+  User.findByIdAndUpdate(req.user._id, { name, birthday }, { runValidators: true, new: true })
     .then((user) => {
       if (!user) {
         return res.status(404).send({ message: 'Не удалось найти пользователя' });
