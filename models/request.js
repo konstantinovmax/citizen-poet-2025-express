@@ -4,12 +4,12 @@ const requestSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    minlength: 5,
+    minlength: 2,
   },
   text: {
     type: String,
     required: true,
-    minlength: 10,
+    minlength: 5,
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
