@@ -35,6 +35,24 @@ const createUser = (req, res) => {
     });
 };
 
+const updateUser = (req, res) => {
+  const { name, phone, email, password } = req.body;
+
+  User.findByIdAndUpdate(req.user._id, { name, phone, email, password }, { runValidators: true, new: true })
+    .then((user) => {
+      if (!user) {
+        return res.status(404).send({ message: 'Не удалось найти пользователя' });
+      }
+      return res.status(200).send(user);
+    })
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        return res.status(400).send({ message: err.message });
+      }
+      return res.status(500).send({ message: 'Ошибка сервера' });
+    });
+};
+
 const deleteUser = (req, res) => {
   User.findByIdAndRemove(req.params.id)
     .then((user) => {
@@ -51,4 +69,4 @@ const deleteUser = (req, res) => {
     });
 }
 
-module.exports = { getUsers, getUserById, createUser, deleteUser };
+module.exports = { getUsers, getUserById, createUser, updateUser, deleteUser };
