@@ -1,21 +1,22 @@
 const poemsList = require('../data/classic_poems.json');
 
 const getPoems = (req, res) => {
-  const { q, onlyLines } = req.query;
-  if (!q && !onlyLines) {
+  const { q, wordAndString } = req.query;
+  if (!q && !wordAndString) {
     return res.send(poemsList);
   };
   const foundPoems = poemsList.reduce((sum, item) => {
-    const poet = item.poet_id;
+    const author = item.poet_id;
     const title = item.title;
     const text = item.content;
     const hasText = text.includes(q);
     if (!hasText) {
       return sum;
     }
-    if (onlyLines) {
+    if (wordAndString) {
+      const word = text.match(q);
       const lines = text.split(/\n/).filter(line => line.includes(q));
-      return sum.concat({ poet, title, text: lines });
+      return sum.concat({ author, title, searchResult: {word, poemString: lines} });
     }
     return sum.concat(item);
   }, [])
