@@ -1,8 +1,8 @@
 const poemsList = require('../data/classic_poems.json');
 
 const getPoems = (req, res) => {
-  const { q, wordAndString } = req.query;
-  if (!q && !wordAndString) {
+  const { q, wordString, wordStringPoem } = req.query;
+  if (!q && !wordString && !wordStringPoem) {
     return res.send(poemsList);
   };
   const foundPoems = poemsList.reduce((sum, item) => {
@@ -13,10 +13,16 @@ const getPoems = (req, res) => {
     if (!hasText) {
       return sum;
     }
-    if (wordAndString) {
+    if (wordString) {
       const word = text.match(q);
       const lines = text.split(/\n/).filter(line => line.includes(q));
       return sum.concat({ author, title, searchResult: {word, poemString: lines} });
+    }
+    if (wordStringPoem) {
+      const word = text.match(q);
+      const lines = text.split(/\n/).filter(line => line.includes(q));
+      const poem = text.split(/\n/);
+      return sum.concat({ author, title, searchResult: {word, poemString: lines, poem} });
     }
     return sum.concat(item);
   }, [])
