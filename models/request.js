@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
 const requestSchema = new mongoose.Schema({
-  text: {
+  title: {
     type: String,
     required: true,
     minlength: 5,
+  },
+  text: {
+    type: String,
+    required: true,
+    minlength: 10,
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
