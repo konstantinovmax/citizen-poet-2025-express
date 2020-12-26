@@ -2,7 +2,8 @@
 
 **[Ссылка на сервер](https://citizen-poet-2025.herokuapp.com/)**
 
-**[Ссылка на фронтенд](https://github.com/HappyMarvin/citizen-poet-2025)**
+**[Ссылка на фронтенд (репозиторий)](https://github.com/HappyMarvin/citizen-poet-2025)**
+**[Ссылка на фронтенд (gh-pages)](https://happymarvin.github.io/citizen-poet-2025/)**
 
 
 ---
