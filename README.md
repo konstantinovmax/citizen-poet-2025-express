@@ -7,6 +7,17 @@
 **[Ссылка на фронтенд (gh-pages)](https://happymarvin.github.io/citizen-poet-2025/)**
 
 
+**Участники проекта**
+- Максим Константинов
+- Настя Мурзина
+- Мария Чередник
+- Владимир Сорокин
+
+**Дизайн проект**
+
+[Figma](https://www.figma.com/file/Nf4TGlb5xZuxMB4f8EuarQ/%D0%93%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B8%D0%BD-%D0%BF%D0%BE%D1%8D%D1%82)
+
+
 ---
 
 **Запуск сервера**
