@@ -7,9 +7,9 @@ const getRequests = (req, res) => {
 };
 
 const createRequest = (req, res) => {
-  const { title, text } = req.body;
+  const { text } = req.body;
 
-  Request.create({ title, text, owner: req.user._id })
+  Request.create({ text, owner: req.user._id })
     .then((request) => res.status(200).send(request))
     .catch((err) => {
       if (err.name === 'ValidationError') {

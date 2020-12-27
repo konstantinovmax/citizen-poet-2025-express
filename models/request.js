@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const requestSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-    minlength: 2,
-  },
   text: {
     type: String,
     required: true,
