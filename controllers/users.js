@@ -67,6 +67,6 @@ const deleteUser = (req, res) => {
       }
       return res.status(500).send({ message: 'Ошибка сервера' });
     });
-}
+};
 
 module.exports = { getUsers, getUserById, createUser, updateUser, deleteUser };

@@ -4,7 +4,7 @@ const getPoems = (req, res) => {
   const { q, wordString, wordStringPoem } = req.query;
   if (!q && !wordString && !wordStringPoem) {
     return res.send(poemsList);
-  };
+  }
   const foundPoems = poemsList.reduce((sum, item) => {
     const author = item.poet_id;
     const title = item.title;
@@ -25,8 +25,8 @@ const getPoems = (req, res) => {
       return sum.concat({ author, title, searchResult: {word, poemString: lines, poem} });
     }
     return sum.concat(item);
-  }, [])
+  }, []);
   res.send(foundPoems);
-}
+};
 
-module.exports = { getPoems }
+module.exports = { getPoems };
